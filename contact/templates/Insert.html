@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSERT</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+       <h1> <tr><td>Name</td>
+        <td>Number</td>
+        </tr></thead>
+        {% for i in res %}
+    <tr>
+        <td>{{ i.Name }}</td>
+        <td>{{ i.Number }}</td>
+        
+    </tr>
+    {% endfor %}
+  </table>
+    <form method="POST"> {% csrf_token %}
+        <label for="id1">Name :</label>
+        <input type="text" name="name" id="id1" placeholder="enter Name" required>
+        <label for="id2">Number :</label>
+        <input type="text" name="number" id="id2" placeholder="enter number" required>
+       
+        <button type="submit">Add</button>
+
+    </form>
+</body>
+</html>

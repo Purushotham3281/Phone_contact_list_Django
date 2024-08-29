@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Restuarent</title>
+</head>
+<body>
+    <form method="POST"> {% csrf_token %}
+        <label for="id1"> Contact : </label>
+        <input id="id1" name='name' placeholder="search Name" required>
+        <button>submit</button>
+        
+    </form>
+    {% if res %}
+    <h2>Your Note is </h2>
+    <h3> Item  :  {{ res2.Name }}</h3>
+    <h3> Price :  {{ res2.Number }}</h3>
+    
+    {% endif %}
+</body>
+</html>
